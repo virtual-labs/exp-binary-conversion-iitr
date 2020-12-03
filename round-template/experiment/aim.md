@@ -1,0 +1,1 @@
+#### To analyse the truth table of binary to gray and gray to binary converter using combination of NAND gates and to understand the working of binary to gray and gray to binary converter with the help of LEDs display.
