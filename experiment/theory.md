@@ -1,1 +1,39 @@
-### Link your theory in here
+### Introduction
+
+Binary Numbers is default way to store numbers, but in many applications binary numbers are difficult to use and a variation of binary numbers is needed. This is where Gray codes are very useful.<br><br>
+Gray code has property that two successive numbers differ in only one bit because of this property gray code does the cycling through various states with minimal effort and used in K-maps, error correction, communication etc.<br><br>In computer science many a times we need to convert binary code to gray code and vice versa. This conversion can be done by applying following rules :<br>
+
+### 1) Binary to Gray conversion : 
+1. The Most Significant Bit (MSB) of the gray code is always equal to the MSB of the given binary code.<br>
+2. Other bits of the output gray code can be obtained by Ex-ORing binary code bit at that index and previous index.<br><br>
+There are four inputs and four outputs. The input variable are defined as B<sub>3</sub>, B<sub>2</sub>, B<sub>1</sub>, B<sub>0</sub> and the output variables are defined as G<sub>3</sub>, G<sub>2</sub>, G<sub>1</sub>, G<sub>0</sub>. From the truth table, combinational circuit is designed.The logical expressions are defined as :<br><br>
+
+<b>B<sub>3</sub> = G<sub>3</sub><br>
+
+B<sub>2</sub> ⊕ B<sub>3</sub> = G<sub>2</sub><br>
+
+B<sub>1</sub> ⊕ B<sub>2</sub> = G<sub>1</sub><br>
+
+B<sub>0</sub> ⊕ B<sub>1</sub> = G<sub>0</sub></b><br><br>
+
+<center><img src="images/bb.png"  width="250" height="300"> <br><b>Figure-1: Binary to Gray Code Converter Circuit</b><br>
+<img src="images/ccb.png"  width="550" height="300"> <br><b> Figure-2: Binary to Gray Code Converter Truth Table</b><br></center>
+
+
+#### 2) Gray to binary conversion :</h3><br><br>
+
+1.The Most Significant Bit (MSB) of the binary code is always equal to the MSB of the given binary number.<br>
+2.Other bits of the output binary code can be obtained by checking gray code bit at that index. If current gray code bit is 0, then copy previous binary code bit, else copy invert of previous binary code bit.<br><br> There are four inputs and four outputs. The input variable are defined as G<sub>3</sub>, G<sub>2</sub>, G<sub>1</sub>, G<sub>0</sub> and the output variables are defined as B<sub>3</sub>, B<sub>2</sub>, B<sub>1</sub>, B<sub>0</sub>. From the truth table, combinational circuit is designed.The logical expressions are defined as :<br><br>
+
+<b>G<sub>0</sub> ⊕ G<sub>1</sub> ⊕ G<sub>2</sub> ⊕ G<sub>3</sub> = B<sub>0</sub><br>
+
+G<sub>1</sub> ⊕ G<sub>2</sub> ⊕ G<sub>3</sub> = B<sub>1</sub><br>
+
+G<sub>2</sub> ⊕ G<sub>3</sub> = B<sub>2</sub><br>
+
+G<sub>3</sub> = B<sub>3</sub><br></b><br><br>
+
+
+<center><img src="images/aa.png"  width="300" height="250"> <br><b>Figure-3: Gray to Binary Code Converter Circuit</b><br>
+<img src="images/cca.png"  width="550" height="300"> <br><b>Figure-4: Gray to Binary Code Converter Truth Table </b><br></center>
+
